@@ -1,0 +1,22 @@
+class Solution {
+    public int maxDepth(String s) {
+        
+        int c_d=0;
+        int m_d=0;
+
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch=='('){
+                c_d++;
+                m_d=Math.max(m_d,c_d);
+                
+            }
+            else if(ch==')'){
+                c_d--;
+                
+            }
+        }
+        return m_d;
+        
+    }
+}
